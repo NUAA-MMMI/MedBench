@@ -17,3 +17,22 @@ delta.txt
 **/.gradio/
 **/temp/
 /hugging_cache/
+*.pdf
+
+# 忽略所有 .pdf 文件
+*.pdf
+
+# 忽略所有 .log 日志文件
+*.log
+
+# 忽略 Python 缓存文件
+__pycache__/
+*.py[cod]
+
+# 忽略系统自动生成的文件
+.DS_Store
+Thumbs.db
+
+# 忽略虚拟环境
+venv/
+.venv/
