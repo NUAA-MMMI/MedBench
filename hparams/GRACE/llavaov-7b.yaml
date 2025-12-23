@@ -1,0 +1,31 @@
+# ====== 基本配置 ======
+alg_name: "GRACE"                                   # 所采用的知识编辑算法名称
+model_name: "./hugging_cache/llava-onevision-qwen2-7b-ov-hf"  # 预训练/微调模型所在目录
+device: 0                                           # 使用的 GPU 编号；-1 表示 CPU
+
+# ====== 需要更新的内部参数 ======
+inner_params:
+  # 以下是可选项示例，通常一次只启用一组权重
+  # - language_model.model.layers[18].mlp.down_proj.weight  # 全精度 LLaVA 路径（已注释）
+  - language_model.layers[23].mlp.down_proj.weight          # Qwen-2 路径；本次实际生效
+  # - language_model.layers[23].mlp.down_proj.weight        # 另一层，可按需打开
+
+# ====== GRACE 主要超参 ======
+edit_lr: 0.1                                        # 编辑阶段的学习率
+n_iter: 10                                          # 最大迭代步数
+eps: 1.0                                            # L-Infinity 约束 (ε)；限制权重改动幅度
+
+# ====== 距离度量与校正策略 ======
+dist_fn: euc          # 计算梯度方向所用的距离函数：euc(欧氏) / mmd / cos(余弦)
+val_init: cold        # 校正网络初始化方式：cold(随机) / warm(拷贝源权重)
+val_train: sgd        # 校正网络优化器：sgd / pert(扰动)
+val_reg: None         # 校正网络正则化：early / None
+reg: early_stop       # 主编辑过程的正则化策略：early_stop | (留空表示不启用)
+
+# ====== 更新/替换范围 ======
+replacement: replace_last   # 替换策略：replace_last | replace_all | replace_prompt
+eps_expand: coverage        # ε 动态调整方式：coverage | moving_avg | decay
+
+# ====== 扭曲 / 探索参数 ======
+num_pert: 8                 # 仅在 val_train=pert 时生效的扰动次数
+dropout: 0.0                # 编辑阶段在指定层注入的 dropout，0.0 表示关闭

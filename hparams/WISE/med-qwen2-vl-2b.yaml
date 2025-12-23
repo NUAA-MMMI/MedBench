@@ -1,0 +1,50 @@
+# 修改后的 med-qwen2-vl-2b.yaml 配置文件
+
+alg_name: "WISE"
+# 方案1: 使用官方 Hugging Face 模型（推荐）
+# model_name: "prithivMLmods/Radiology-Infer-Mini"
+
+# 方案2: 如果必须使用本地模型，添加以下配置
+model_name: "./hugging_cache/Radiology-Infer-Mini"
+# 并且需要确保本地模型配置文件完整
+
+device: 0
+
+# 针对医疗模型优化的参数
+mask_ratio: 0.2
+edit_lr: 0.1  # 更小的学习率，保护医疗模型的精度
+n_iter: 10
+norm_constraint: 1.0
+act_margin: [5.0, 20.0, 10.0]
+act_ratio: 0.4
+save_freq: 500
+merge_freq: 1000
+merge_alg: 'ties'
+objective_optimization: 'only_label'
+
+# 确保这个层存在于医疗模型中
+inner_params:
+- model.layers[23].mlp.down_proj.weight
+# - model.language_model.layers[23].mlp.down_proj.weight
+
+# for merge (if merge)
+densities: 0.53
+weights: 1.0
+
+# for retrieve (if retrieve, pls set to True)
+retrieve: True
+replay: False
+
+model_parallel: False
+use_chat_template: True
+
+# Multimodal - 针对医疗图像的配置
+exact_match: True
+hidden_act: silu
+qformer_checkpoint: .
+qformer_name_or_path: .
+state_dict_file: .
+# 医疗图像通常是静态图像，不是视频
+file_type: video
+coco_image: ../
+rephrase_image: ../

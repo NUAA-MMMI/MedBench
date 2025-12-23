@@ -1,0 +1,30 @@
+alg_name: "IKE"
+model_name: "./hugging_cahce/qwen2-vl-7b"
+sentence_model_name: "./hugging_cache/all-MiniLM-L6-v2"
+device: 2
+results_dir: "./results"
+
+k: 0
+# model_parallel: false
+# results_dir: "./results"
+
+# IKE 算法特定参数
+k: 0 # 当 k=0 时，将使用下面的 template
+template: "Question: {prompt}\nAnswer: {target}"
+
+# IKEMultimodalHyperParams 中定义的附加参数
+name: "IKE" # 实验名称
+task_name: "vqa" # 任务名称，例如 vqa (Visual Question Answering)
+
+# 下面这些字段对于 llava-onevision 模型不是必需的，但为了符合类定义而保留
+tokenizer_class: "" # 对于llava-onevision，从model_name加载，无需单独指定
+tokenizer_name: ""  # 对于llava-onevision，从model_name加载，无需单独指定
+qformer_checkpoint: "" # BLIP-2/MiniGPT4 使用，此处留空
+qformer_name_or_path: "" # BLIP-2/MiniGPT4 使用，此处留空
+state_dict_file: "" # BLIP-2/MiniGPT4 使用，此处留空
+pretrained_ckpt: "" # MiniGPT4 使用，此处留空
+
+# 图像路径 (根据 Med_multimodal_edit_IKE.py 中的路径)
+# file_type: video
+coco_image: ../
+rephrase_image: ../

@@ -1,0 +1,37 @@
+alg_name: "WISE"
+model_name: "./hugging_cache/qwen2-vl-7b"
+
+device: 1
+
+mask_ratio: 1.0
+edit_lr: 0.01
+n_iter: 10
+norm_constraint: 1.0
+# act_margin: [5.0, 20.0, 10.0]
+act_margin: [2.0, 10.0, 5.0]
+act_ratio: 0.4
+save_freq: 500
+merge_freq: 1000
+merge_alg: 'ties'
+objective_optimization: 'only_label'
+inner_params:
+  # - model.layers[23].mlp.down_proj.weight
+- model.language_model.layers[23].mlp.down_proj.weight
+
+densities: 0.53
+weights: 1.0
+
+retrieve: true
+replay: false
+
+model_parallel: false
+use_chat_template: true
+
+exact_match: true
+hidden_act: silu
+qformer_checkpoint: .
+qformer_name_or_path: .
+state_dict_file: .
+file_type: video
+coco_image: ../
+rephrase_image: ../

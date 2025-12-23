@@ -1,0 +1,19 @@
+alg_name: "IKE"
+model_name: "./hugging_cache/llava-onevision-qwen2-7b-ov-hf"
+sentence_model_name: "./hugging_cache/all-MiniLM-L6-v2"
+device: 1
+results_dir: "./results"
+k: 0
+template: "Question: {prompt}\nAnswer: {target}\n\n"
+# 缺少的必需参数
+name: "llava-onevision-qwen2-7b-ov-hf"  # 模型名称
+tokenizer_class: "AutoTokenizer"  # tokenizer 类名
+tokenizer_name: "./hugging_cache/llava-onevision-qwen2-7b-ov-hf"  # tokenizer 路径
+task_name: "vqa"  # 任务名称
+qformer_checkpoint: ""  # 如果不需要可以留空
+qformer_name_or_path: ""  # 如果不需要可以留空
+state_dict_file: ""  # 如果不需要可以留空
+coco_image: "/mnt/40t/medEdit_nuaa/dataset/images2"  # 图像目录路径
+rephrase_image: "/path/to/rephrase/images"  # 重述图像目录路径
+exact_match: false  # 可选参数
+pretrained_ckpt: null  # 可选参数
