@@ -7,14 +7,8 @@
   <a href="https://arxiv.org/abs/2508.07022"><img src="https://img.shields.io/static/v1?label=Paper&message=Arxiv:MedFrameQA&color=red&logo=arxiv"></a>  
 </div>
 
-
 ---
 
-> [MultiMedEdit: A Scenario-Aware Benchmark for Evaluating Knowledge Editing in Medical VQA](https://arxiv.org/abs/2508.07022)
-> [Suhao Yu*](https://suhaoyu1020.github.io/), [Haojin Wang*](https://haojinw0027.github.io/),
-> [Juncheng Wu*](https://chtholly17.github.io/),
-> [Cihang Xie](https://cihangxie.github.io/),
-> [Yuyin Zhou](https://yuyinzhou.github.io/)
 
 ---
 
