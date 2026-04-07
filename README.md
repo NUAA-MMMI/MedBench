@@ -13,9 +13,9 @@
 ---
 
 ## 📢 Breaking News
-
-- [📄💥 May 22, 2025] Our [arXiv paper](https://arxiv.org/abs/2505.16964) is released.
-- [💾 May 22, 2025] Full dataset released.
+- [🎉 11, Sep, 2025] Our paper is accepted by AAAI 2026 as an oral presentation!
+- [📄💥 9, Aug, 2025] Our [[arXiv paper](https://arxiv.org/abs/2505.16964)] is released.
+- [💾 9, Aug, 2025] Full dataset released.
 
 Star 🌟 us if you think it is helpful!!
 
