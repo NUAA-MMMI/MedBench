@@ -11,7 +11,7 @@ Editing in Medical VQA <div>
 
 ---
 
-> [[2508.07022\] MultiMedEdit: A Scenario-Aware Benchmark for Evaluating Knowledge Editing in Medical VQA](https://arxiv.org/abs/2508.07022)
+> [MultiMedEdit: A Scenario-Aware Benchmark for Evaluating Knowledge Editing in Medical VQA](https://arxiv.org/abs/2508.07022)
 > [Suhao Yu*](https://suhaoyu1020.github.io/), [Haojin Wang*](https://haojinw0027.github.io/),
 > [Juncheng Wu*](https://chtholly17.github.io/),
 > [Cihang Xie](https://cihangxie.github.io/),
