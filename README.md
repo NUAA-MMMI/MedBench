@@ -1,5 +1,4 @@
-# <div align="center"> MultiMedBench: A Scenario-Aware Benchmark for Evaluating Knowledge
-Editing in Medical VQA <div>
+# <div align="center"> MultiMedBench: A Scenario-Aware Benchmark for Evaluating Knowledge Editing in Medical VQA <div>
 
 <div align="center">
   <a href=""><img src="https://img.shields.io/static/v1?label=Code&message=Github&color=blue&logo=github-pages"></a>  
