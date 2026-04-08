@@ -3,8 +3,8 @@
 <div align="center">
   <a href=""><img src="https://img.shields.io/static/v1?label=Code&message=Github&color=blue&logo=github-pages"></a>  
   <a href=""><img src="https://img.shields.io/static/v1?label=Project%20Page&message=Github&color=blue&logo=github-pages"></a>  
-  <a href="><img src="https://img.shields.io/static/v1?label=MedFrameQA&message=HF&color=yellow"></a>  
-  <a href="https://arxiv.org/abs/2508.07022"><img src="https://img.shields.io/static/v1?label=Paper&message=Arxiv:MedFrameQA&color=red&logo=arxiv"></a>  
+  <a href="><img src="https://img.shields.io/static/v1?label=MultiMedEdit&message=HF&color=yellow"></a>  
+  <a href="https://arxiv.org/abs/2508.07022"><img src="https://img.shields.io/static/v1?label=Paper&message=Arxiv:MultiMedEdit&color=red&logo=arxiv"></a>  
 </div>
 
 
