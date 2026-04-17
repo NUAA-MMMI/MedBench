@@ -28,5 +28,3 @@ Star 🌟 us if you think it is helpful!!
 | Dataset      |                                            🤗 Huggingface Hub |
 | ------------ | -----------------------------------------------------------: |
 | MultiMedEdit | [NUAA-MMMI/MedBench · Datasets at Hugging Face](https://huggingface.co/datasets/NUAA-MMMI/MedBench) |
-
----
